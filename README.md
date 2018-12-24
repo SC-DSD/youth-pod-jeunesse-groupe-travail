@@ -1,12 +1,12 @@
-# youth-pod-jeunesse-groupe-travail
+# youth-pod-jeunesse-groupe-travail-v0
 
-Intended to be the official Youth Pod dev repo
 
 ***
 
 **Table of contents** 
 
 * [Preface](#preface)
+* [Work Done](#work-done)
 * [Preview Links](#preview-links)
 * [Contributing](#contributing)
 * [License](#license)
@@ -14,8 +14,12 @@ Intended to be the official Youth Pod dev repo
 
 ## Preface
 
-This repo was created to TODO.
+V0 branch - Embryonic attempts at manipulating the template and recreating the first prototype. Will be using this branch as a test in order to iron out the workflow and figuring-out loose ends.
 
+## Work done
+
+* Recreated the initial prototype content
+* Embryonic attempts to manipulate the template
 
 ## Preview Links 
 
@@ -36,7 +40,6 @@ TODO
 
 * Modify the files in your directory using your favourite text editor 
 * Check out the results on the localhost server that [Hugo](https://gohugo.io/) runs
-
 
 
 ## Contributing

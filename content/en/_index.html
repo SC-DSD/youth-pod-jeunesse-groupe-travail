@@ -11,118 +11,114 @@
         "search": true,
 		"siteMenu": false,
 		"showPreContent": false,
-        "showFeatures": false
+        "showFeatures": false,
+        "showBreadcrumb": false
     }
 }
 
-<h1 property="name" id="wb-cont">Content page</h1>
-<section>
-    <h2>Heading&#32;2&#32;(<code>h2</code>)</h2>
+<style>
+    hr{
+        border: none;
+        height:5px !important;
+    }
+
+    hr.fuschia{
+        background-color:mediumorchid !important;
+    }
+    hr.yellow{
+        background-color:orange !important;
+    }
+    hr.blue{
+        background-color:steelblue !important;
+    }
+    hr.green{
+        background-color:mediumseagreen !important;
+    }
+
+    section.banner{
+        background-color:slategrey !important;
+    }
+
+    section.f1{
+        background-color:deepskyblue !important;
+    }
+
+    a.f1-link{
+        color:#FFF !important;
+    }
+
+    h1.versionTitle{
+        color:#FFF !important;
+        font-size: 80px !important;
+        margin-top: 30px !important;
+        margin-bottom: 5px !important;
+    }
+    span.bgfuschia{
+        background-color:rgba(241, 29, 248, 0.7) !important;
+        padding-right: 20px !important;
+        padding-left: 20px !important;
+
+    }
+    span.bggreen{
+        background-color:rgba(25, 255, 140, 0.7) !important;
+        padding-right: 20px !important;
+        padding-left: 20px !important;
+
+    }
+    span.bgblue{
+        background-color:rgba(33, 115, 240, 0.7)!important;
+        padding-right: 20px !important;
+        padding-left: 20px !important;
+    }
+    p.tagline{
+        color:#FFF !important;
+        font-weight: bold !important;
+    }
+</style>
+
+<section class="banner">
+<h1 class="versionTitle"><span class="bgfuschia">YOUTH</span> <br/> <span class="bggreen">@</span> <br/> <span class="bgblue">WORK</span></h1>
+</section>
+<div class="clearfix"></div>
+<section class="text-center f1">
+    <p class="tagline">Get personalized information about our programs and services</p>
+    <img src="#" class="progressBar"/>
+    <form method="post" action="#" class="form-horizontal">
+        <div class="form-group">
+            <label for="data4" class="col-sm-3 control-label">I am a</code></label>
+            <div class="col-sm-9">
+                <select name="data1" id="data1" class="form-control">
+                    <option value="1">Placeholder text</option>
+                    <option value="2">Student</option>
+                    <option value="3">Employer</option>    
+                </select>
+            </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Button</button>
+    </form>
+    <p><a class="f1-link" href="#">See all programs and services</a></p>
+</section>
+    <section class="col-md-12">
+        <h2>Trending opportunities</h2>
+        <hr class="fuschia"/>
     <section>
-        <h3>Heading&#32;3&#32;(<code>h3</code>)</h3>
-        <section>
-            <h4>Heading&#32;4&#32;(<code>h4</code>)</h4>
-            <section>
-                <h5>Heading&#32;5&#32;(<code>h5</code>)</h5>
-                <section>
-                    <h6>Heading&#32;6&#32;(<code>h6</code>)</h6>
-                    <p>Paragraph - default appearance</p>
-                </section>
-            </section>
-        </section>
+        <h3>Canada Service Corps</h3>
+        <p>Serve your community while learning valuable skills and gaining experience.</p>
+        <a class="btn btn-more" href="#" role="button">More details</a>
+    <hr class="green"/>
+    </section>
+    <section>
+        <h3>Apprenticeship Grants</h3>
+        <p>Find out how you can get up to $4,000 through the Apprenticeship Incentive Grant and the Apprenticeship Completion Grant.</p>
+        <a class="btn btn-more" href="#" role="button">More details</a>
+    <hr class="blue"/>
+    </section>
+    <section>
+        <h3>Job Bank</h3>
+        <p>Search available full and part-time jobs and find the one that's right for you.</p>
+        <a class="btn btn-more" href="#" role="button">More details</a>
+    <hr class="yellow"/>
+    </section>
     </section>
 </section>
-<p><a href="#">Link</a></p>
-<ul>
-    <li>
-        unordered list&#32;(<code>ul</code>) - level&#32;1
-        <ul>
-            <li>
-                unordered list&#32;(<code>ul</code>) - level&#32;2
-                <ul>
-                    <li>unordered list&#32;(<code>ul</code>) - level&#32;3</li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-</ul>
-<ol>
-    <li>ordered list&#32;(<code>ol</code>) - level&#32;1</li>
-    <li>
-        ordered list&#32;(<code>ol</code>) - level&#32;1
-        <ol>
-            <li>ordered list&#32;(<code>ol</code>) - level&#32;2</li>
-            <li>
-                ordered list&#32;(<code>ol</code>) - level&#32;2
-                <ol>
-                    <li>ordered list&#32;(<code>ol</code>) - level&#32;3</li>
-                    <li>ordered list&#32;(<code>ol</code>) - level&#32;3</li>
-                </ol>
-            </li>
-        </ol>
-    </li>
-</ol>
-<table class="table table-striped">
-    <caption>Table caption</caption>
-    <thead>
-        <tr>
-            <th scope="col">Table header&#32;(<code>th</code>)</th>
-            <th scope="col">Table header&#32;(<code>th</code>)</th>
-            <th scope="col">Table header&#32;(<code>th</code>)</th>
-            <th scope="col">Table header&#32;(<code>th</code>)</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Table data&#32;(<code>td</code>)</td>
-            <td>Table data&#32;(<code>td</code>)</td>
-            <td>Table data&#32;(<code>td</code>)</td>
-            <td>Table data&#32;(<code>td</code>)</td>
-        </tr>
-        <tr>
-            <td>Table data&#32;(<code>td</code>)</td>
-            <td>Table data&#32;(<code>td</code>)</td>
-            <td>Table data&#32;(<code>td</code>)</td>
-            <td>Table data&#32;(<code>td</code>)</td>
-        </tr>
-        <tr>
-            <td>Table data&#32;(<code>td</code>)</td>
-            <td>Table data&#32;(<code>td</code>)</td>
-            <td>Table data&#32;(<code>td</code>)</td>
-            <td>Table data&#32;(<code>td</code>)</td>
-        </tr>
-    </tbody>
-</table>
-<form method="post" action="#" class="form-horizontal">
-    <div class="form-group">
-        <label for="data1" class="col-sm-3 control-label">Form&#32;<code>input</code></label>
-        <div class="col-sm-9">
-            <input type="text" id="data1" name="data1" class="form-control">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="data2" class="col-sm-3 control-label">Form&#32;<code>textarea</code></label>
-        <div class="col-sm-9">
-            <textarea id="data2" rows="3" cols="15" name="data2" class="form-control"></textarea>
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="data4" class="col-sm-3 control-label">Form&#32;<code>select</code></label>
-        <div class="col-sm-9">
-            <select name="data4" id="data4" class="form-control">
-                <option value="1">Option&#32;1</option>
-                <option value="2">Option&#32;2</option>
-                <option value="3">Option&#32;3</option>
-                <option value="4">Option&#32;4</option>
-            </select>
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-sm-offset-3 col-sm-9">
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
-    </div>
-</form>
-<blockquote>
-    <p>"<code>blockquote</code>"</p>
-</blockquote>
+
