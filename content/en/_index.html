@@ -34,13 +34,38 @@
     hr.green{
         background-color:mediumseagreen !important;
     }
+    .container{
+        width: 100% !important;
+    }
+    header{
+        padding-left:30px !important;
+        padding-right:30px !important;
+    }
+
+    ol.breadcrumb{
+        visibility: hidden !important;
+        height: 0px;
+    }
 
     section.banner{
         background-color:slategrey !important;
+        padding-top:1px !important;
+        background-image: url(http://lorempixel.com/1800/400/) !important;
+        background-position: top center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        min-height: 300px !important;
+        box-sizing: border-box !important;
+        margin-right: -15px !important;
+        margin-left: -15px !important;
+        margin-bottom:5px !important;
+        border-bottom: none !important;
     }
 
     section.f1{
         background-color:deepskyblue !important;
+        margin-right: -15px !important;
+        margin-left: -15px !important;
     }
 
     a.f1-link{
@@ -49,9 +74,11 @@
 
     h1.versionTitle{
         color:#FFF !important;
+        line-height: 120px !important;
         font-size: 80px !important;
-        margin-top: 30px !important;
+        margin-left: 30px !important;
         margin-bottom: 5px !important;
+        
     }
     span.bgfuschia{
         background-color:rgba(241, 29, 248, 0.7) !important;
@@ -63,6 +90,7 @@
         background-color:rgba(25, 255, 140, 0.7) !important;
         padding-right: 20px !important;
         padding-left: 20px !important;
+        padding-bottom: 10px !important;
 
     }
     span.bgblue{
@@ -73,6 +101,18 @@
     p.tagline{
         color:#FFF !important;
         font-weight: bold !important;
+    }
+
+    a.btnmr{
+        background-color:	rgb(45,45,45) !important;
+        font-size: 80% !important;
+        text-decoration: none !important;
+        color: #FFF !important;
+        box-shadow: 2px 2px 3px 1px rgb(200,200,200)!important;
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
     }
 </style>
 
@@ -104,19 +144,19 @@
     <section>
         <h3>Canada Service Corps</h3>
         <p>Serve your community while learning valuable skills and gaining experience.</p>
-        <a class="btn btn-more" href="#" role="button">More details</a>
+        <a class="btnmr" href="#" role="button">More details</a>
     <hr class="green"/>
     </section>
     <section>
         <h3>Apprenticeship Grants</h3>
         <p>Find out how you can get up to $4,000 through the Apprenticeship Incentive Grant and the Apprenticeship Completion Grant.</p>
-        <a class="btn btn-more" href="#" role="button">More details</a>
+        <a class="btnmr" href="#" role="button">More details</a>
     <hr class="blue"/>
     </section>
     <section>
         <h3>Job Bank</h3>
         <p>Search available full and part-time jobs and find the one that's right for you.</p>
-        <a class="btn btn-more" href="#" role="button">More details</a>
+        <a class="btnmr" href="#" role="button">More details</a>
     <hr class="yellow"/>
     </section>
     </section>
