@@ -1,0 +1,52 @@
+<html>
+<body>
+
+<p>Fetching JSON objects.</p>
+
+<p id="demo"></p>
+
+<script>
+var myObj, i, j, x = "";
+
+myObj = {
+  "vignette":[{
+    "title":"Find a job",
+    "url":"https://www.jobbank.gc.ca/findajob",
+    "descriptor":"Job Alerts is a free email notification service that sends you job postings twice a day. This is a fast and easy job search tool that anyone can use. All you need is an email address!",
+    "relevance": [
+      {"audience":[0, 0, 4, 5, 3, 2]}, /* in order, relevance vs order of relevance of search term */
+      {"objective":[0, 3, 5]}, /* in order, relevance vs order of relevance of search term */
+      {"goal":[2, 0, 1] } /* in order, relevance vs order of relevance of search term */
+    ]},
+
+    {"title":"Starting a business",
+    "url":"https://www.canada.ca/en/services/business/start.html",
+    "descriptor":"The steps to consider before operating a business in Canada.",
+    "relevance": [
+      {"audience":[5, 0, 0, 3, 2, 4]}, /* in order, relevance vs order of relevance of search term */
+      {"objective":[5, 0, 0]}, /* in order, relevance vs order of relevance of search term */
+      {"goal":[5, 0, 1] } /* in order, relevance vs order of relevance of search term */
+    ]},
+
+    {"title":"My immigration or citizenship application",
+    "url":"https://www.canada.ca/en/immigration-refugees-citizenship/services/application.html",
+    "descriptor":"E",
+    "relevance": [
+      {"audience":[1, 1, 1, 5, 3, 1]}, /* in order, relevance vs order of relevance of search term */
+      {"objective":[1, 1, 1]}, /* in order, relevance vs order of relevance of search term */
+      {"goal":[1, 1, 1] } /* in order, relevance vs order of relevance of search term */
+    ]},
+  ]
+}
+
+for (i in myObj.vignette) {
+    x += "<h2>" + myObj.vignette[i].title + "</h2><p><a href='"+ myObj.vignette[i].url +"'>" + myObj.vignette[i].descriptor + "</a></p>";
+    for (j in myObj.vignette[i].relevance[0].audience) {
+      x += myObj.vignette[i].relevance[0].audience[j] + "<br>";
+    }
+}
+document.getElementById("demo").innerHTML = x;
+</script>
+
+</body>
+</html>
