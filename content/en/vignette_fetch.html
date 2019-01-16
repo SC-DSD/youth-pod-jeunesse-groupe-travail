@@ -1,52 +1,50 @@
 <html>
 <body>
+<script rel="javascript" type="text/javascript" src="vignettes.js"></script>
 
-<p>Fetching JSON objects.</p>
-
-<p id="demo"></p>
+<p>Fetching, sorting and displaying JSON objects.</p>
+<p id="sResults"></p>
 
 <script>
-var myObj, i, j, x = "";
+var myObj, i, j, k, l, x = "";
+var relcount = 0;
+var rescount = 0;
 
-myObj = {
-  "vignette":[{
-    "title":"Find a job",
-    "url":"https://www.jobbank.gc.ca/findajob",
-    "descriptor":"Job Alerts is a free email notification service that sends you job postings twice a day. This is a fast and easy job search tool that anyone can use. All you need is an email address!",
-    "relevance": [
-      {"audience":[0, 0, 4, 5, 3, 2]}, /* in order, relevance vs order of relevance of search term */
-      {"objective":[0, 3, 5]}, /* in order, relevance vs order of relevance of search term */
-      {"goal":[2, 0, 1] } /* in order, relevance vs order of relevance of search term */
-    ]},
+// search parameters
+var aud = 0;
+var objec = 0;
+var gl = 0;
 
-    {"title":"Starting a business",
-    "url":"https://www.canada.ca/en/services/business/start.html",
-    "descriptor":"The steps to consider before operating a business in Canada.",
-    "relevance": [
-      {"audience":[5, 0, 0, 3, 2, 4]}, /* in order, relevance vs order of relevance of search term */
-      {"objective":[5, 0, 0]}, /* in order, relevance vs order of relevance of search term */
-      {"goal":[5, 0, 1] } /* in order, relevance vs order of relevance of search term */
-    ]},
-
-    {"title":"My immigration or citizenship application",
-    "url":"https://www.canada.ca/en/immigration-refugees-citizenship/services/application.html",
-    "descriptor":"E",
-    "relevance": [
-      {"audience":[1, 1, 1, 5, 3, 1]}, /* in order, relevance vs order of relevance of search term */
-      {"objective":[1, 1, 1]}, /* in order, relevance vs order of relevance of search term */
-      {"goal":[1, 1, 1] } /* in order, relevance vs order of relevance of search term */
-    ]},
-  ]
-}
-
+//relevance algorithm calculaton, storage and relevant results count.
 for (i in myObj.vignette) {
-    x += "<h2>" + myObj.vignette[i].title + "</h2><p><a href='"+ myObj.vignette[i].url +"'>" + myObj.vignette[i].descriptor + "</a></p>";
-    for (j in myObj.vignette[i].relevance[0].audience) {
-      x += myObj.vignette[i].relevance[0].audience[j] + "<br>";
-    }
-}
-document.getElementById("demo").innerHTML = x;
-</script>
+    
+  myObj.vignette[i].val = parseInt(myObj.vignette[i].relevance[0].audience[aud] * myObj.vignette[i].relevance[1].objective[objec] * myObj.vignette[i].relevance[2].goal[gl]); 
 
+  if(myObj.vignette[i].val != 1){    
+    relcount++;
+  }
+  rescount++;
+}
+
+// sort by value
+myObj.vignette.sort(function (a, b) {
+  return b.val - a.val;
+});
+
+//show results
+for(j in myObj.vignette){
+  if(myObj.vignette[j].val > 1)
+    //x += "<h2>" + myObj.vignette[j].title + "</h2><p><a href='"+ myObj.vignette[j].url +"'>" + myObj.vignette[j].url + "</a></p><p>" +  myObj.vignette[j].descriptor + "</p><p>" + myObj.vignette[j].val + " is the relevance value for " + myObj.vignette[j].title + "</p>";  
+}
+
+//nothing comes up
+if(relcount == 0){
+  x = "No value could be returned for your current search terms";
+}
+
+//x += "<p><strong>"+ relcount +" relevant results are displayed out of " + rescount + "</strong></p>";
+
+document.getElementById("sResults").innerHTML = x;
+</script>
 </body>
 </html>
