@@ -17,7 +17,7 @@ var myObj={
 			"descriptor": "The steps to consider before operating a business in Canada.",
 			"relevance": [
 				{"audience": [1, 1, 1, 3, 2, 4]},
-				{"objective": [1, 1, 1]},
+				{"objective": [2, 1, 1]},
 				{"goal": [1, 1, 1]}
 			],
 			"val": 0
