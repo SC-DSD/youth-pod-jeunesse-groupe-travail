@@ -17,163 +17,1183 @@
 }
 
 <style>
-    hr{
-        border: none;
-        height:5px !important;
-    }
 
-    hr.fuschia{
-        background-color:mediumorchid !important;
-    }
-    hr.yellow{
-        background-color:orange !important;
-    }
-    hr.blue{
-        background-color:steelblue !important;
-    }
-    hr.green{
-        background-color:mediumseagreen !important;
-    }
-    .container{
-        width: 100% !important;
-    }
-    header{
-        padding-left:30px !important;
-        padding-right:30px !important;
-    }
-
-    ol.breadcrumb{
+ol.breadcrumb{
         visibility: hidden !important;
         height: 0px;
     }
 
-    section.banner{
-        background-color:slategrey !important;
-        padding-top:1px !important;
-        background-image: url(http://lorempixel.com/1800/400/) !important;
-        background-position: top center !important;
-        background-repeat: no-repeat !important;
-        background-size: cover !important;
-        min-height: 300px !important;
-        box-sizing: border-box !important;
-        margin-right: -15px !important;
-        margin-left: -15px !important;
-        margin-bottom:5px !important;
-        border-bottom: none !important;
-    }
-
-    section.f1{
-        background-color:deepskyblue !important;
-        margin-right: -15px !important;
-        margin-left: -15px !important;
-    }
-
-    a.f1-link{
-        color:#FFF !important;
-    }
-
-    h1.versionTitle{
-        color:#FFF !important;
-        line-height: 120px !important;
-        font-size: 80px !important;
-        margin-left: 30px !important;
-        margin-bottom: 5px !important;
-        border-bottom: none !important;
+        /*/ Youth Audience /*/
+        @media screen and (min-width:768px) {
+            .yth-header.yth-header-banner {
+                min-height:250px;
+                background-image:url("/content/dam/esdc-edsc/images/services/youth/Banner2.jpg");
+                background-repeat:no-repeat;
+                background-size:cover;
+                background-position:top left;
+                max-height: 502px;
+            }
+        }
+        @media screen and (min-width:992px) {
+            .yth-header.yth-header-banner  {
+                min-height:300px;
+                max-height: 502px;
+            }
+        }
+        @media screen and (min-width:1200px) {
+            .yth-header.yth-header-banner  {
+                min-height:400px;
+                max-height: 502px;
+            }
+        }
+            .yth-theme, .yth-theme h1, .yth-theme h2, .yth-theme h3, .yth-theme h4  {
+                font-family:"Trebuchet MS",Helvetica, Arial, sans-serif;
+                overflow:hidden;
+            }
+            .yth-text-xl {
+                font-size:200%;
+                font-weight:100;
+            }
+            .yth-text-lg {
+                font-size:150%; 
+                font-weight:100;   
+            }
+            .yth-text-md {
+                font-size:125%;
+                font-weight:700;    
+            }
+            .yth-text-sm {
+                font-size:110%;
+                font-weight:100;    
+            }
+            @media (min-width: 768px) {
+                .yth-text-xl {
+                    font-size:225%;
+                    font-weight:100;
+                }
+                .yth-text-lg {
+                    font-size:175%; 
+                    font-weight:100;   
+                }
+                .yth-text-md {
+                    font-size:125%;
+                    font-weight:700;    
+                }
+                .yth-text-sm {
+                    font-size:110%;
+                    font-weight:100;    
+                }
+            }
+            @media (min-width: 992px) {
+                .yth-text-xl {
+                    font-size:300%;
+                }
+                .yth-text-lg {
+                    font-size:225%;    
+                }
+                .yth-text-md {
+                    font-size:150%;    
+                }
+                .yth-text-sm {
+                    font-size:125%;    
+                }
+            }
         
-    }
-    span.bgfuschia{
-        background-color:rgba(241, 29, 248, 0.7) !important;
-        padding-right: 20px !important;
-        padding-left: 20px !important;
+            .yth-topic-card {
+                display:block;
+                min-height:inherit;
+            }
+            .yth-topic-card.card-style-1 {
+                background-color:rgba(255,255,255,0.8);
+                box-shadow:none;
+            } 
+            .yth-topic-card.card-style-2 {
+                background-color:#fdfdfd;
+                border:1px solid transparent;
+                box-shadow:0 2px 4px rgba(0,0,0,0.3);
+            }
+            .yth-topic-card .card-outer {
+                min-height:inherit;
+            }
+            .yth-topic-card .card-body {
+                position:relative;
+                padding-bottom:20px;
+            }
+        
+            .yth-topic-card.card-style-1 .card-foot{
+                position:relative;
+                border-bottom:2px solid #F36F21;
+                margin-bottom:8px;    
+            }
+            .yth-topic-card.card-style-2 .card-foot {
+                position:relative;
+                border-bottom:2px solid #F36F21;
+                margin-bottom:8px;
+            }  
+                
+            a.yth-topic-card, a.yth-topic-card:visited {
+                color:#333;
+                text-decoration:none;
+            }
+            a.yth-topic-card:hover .card-foot, a.yth-topic-card:focus .card-foot {
+                border-bottom-color:transparent;
+            }
+            
+            a.yth-topic-card.card-style-1:hover .card-foot, a.yth-topic-card.card-style-1:focus .card-foot, a.yth-topic-card.card-style-2:hover .card-foot, a.yth-topic-card.card-style-2:focus .card-foot {
+                border-bottom-color:transparent;
+                
+                animation-delay:0s;  
+                animation-duration: 0.5s;
+                animation-fill-mode:forwards;
+                animation-timing-function: ease;       
+                animation-name: topic-border; 
+            }
+            @keyframes topic-border {
+                0% {
+                    border-bottom-color:#F36F21;
+                }
+                100% {
+                    border-bottom-color:#ddd;
+                }
+            }
+            
+            a.yth-topic-card.card-style-1:hover, a.yth-topic-card.card-style-1:focus {
+                animation-delay:0s;  
+                animation-duration: 0.5s;
+                animation-fill-mode:forwards;
+                animation-timing-function: ease;       
+                animation-name: topic-zoom-1;  
+            }
+            @media (min-width:768px) {
+                a.yth-topic-card.card-style-1:hover, a.yth-topic-card.card-style-1:focus {
+                    animation-delay:0s;  
+                    animation-duration: 0.5s;
+                    animation-fill-mode:forwards;
+                    animation-timing-function: ease;       
+                    animation-name: topic-zoom-3;  
+                }
+            }
+            @keyframes topic-zoom-1 {
+                0% {
+                    transform:scale(1.0);
+                }
+                100% {
+                    transform: scale(1.08);
+                }
+            }
+            @keyframes topic-zoom-3 {
+                0% {
+                    transform:scale(1.0);
+                }
+                100% {
+                    transform: scale(1.15);
+                }
+            }
+            
+            a.yth-topic-card.card-style-2:hover, a.yth-topic-card.card-style-2:focus {
+                animation-delay:0s;  
+                animation-duration: 0.5s;
+                animation-fill-mode:forwards;
+                animation-timing-function: ease;       
+                animation-name: topic-zoom-2;  
+            }
+            @keyframes topic-zoom-2 {
+                0% {
+                    transform:scale(1.0);
+                    box-shadow:0 2px 4px rgba(0,0,0,0.3);
+                    border:1px solid transparent;
+                }
+                100% {
+                    transform: scale(1.0);
+                    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+                    border:1px solid #ddd;
+                }
+            }
+            .yth-topic-card.card-style-1 .yth-topic-icon img, .yth-topic-card.card-style-2 .yth-topic-icon img{
+                position:relative;
+                left:42%;
+                top:0;
+            }
+            .yth-topic-card.card-style-1 .yth-topic-icon img.hover, .yth-topic-card.card-style-2 .yth-topic-icon img.hover {
+                position:absolute;
+                left:20%;
+                margin-top:50px;
+                top:0;
+                opacity:0;
+            }
+            
+            a.yth-topic-card.card-style-1:hover .yth-topic-icon .hover, a.yth-topic-card.card-style-1:focus .yth-topic-icon .hover, a.yth-topic-card.card-style-2:hover .yth-topic-icon .hover, a.yth-topic-card.card-style-2:focus .yth-topic-icon .hover {
+                
+                animation-delay:0s;  
+                animation-duration: 0.5s;
+                animation-fill-mode:forwards;
+                animation-timing-function: ease;       
+                animation-name: topic-icon; 
+            }
+           /* @keyframes topic-icon {
+                0% {
+                    opacity:0;
+                }
+                100% {
+                    opacity:1;
+                }
+            }*/
+            
+            .yth-bg-1 {
+                background-color:transparent;       
+            }
+            .yth-bg-1 .yth-bg-inner {        
+                
+            }
+            .yth-bg-1 .title-block {
+                margin-top:175px;
+                margin-bottom:125px;
+            }
+            .yth-bg-1 .title-block .title-inner {
+                border-radius:5px;
+                background-color:rgba(0,0,0,0.7);
+                padding:15px;
+            }
+            @media (min-width:768px){
+                .yth-bg-1 .title-block .title-inner {
+                    display:inline-block;
+                }
+                .search-block .search-inner {
+                    display:inline-block;
+                }
+            }
+        
+            .yth-bg-2 {
+                background-color:transparent;
+                padding-top:50px;        
+                background-color:#fff;
+            }
+            .yth-bg-3 {        
+                /*background-image:url("/content/dam/esdc-edsc/images/services/youth/yth-bg-1.jpg");
+                background-repeat:repeat-x;
+                background-position:bottom center;
+                background-size:cover;
+                background-attachment:fixed;*/     
+                
+                color:#000;
+                background-color:#f9f9f9;        
+                padding-top:50px;
+                padding-bottom:50px;
+                border-top:1px solid #eee;
+        
+            }  
 
-    }
-    span.bggreen{
-        background-color:rgba(25, 255, 140, 0.7) !important;
-        padding-right: 20px !important;
-        padding-left: 20px !important;
-        padding-bottom: 10px !important;
+            .yth-bg-3 h2{
+                color:#F36F21;
+            }
 
-    }
-    span.bgblue{
-        background-color:rgba(33, 115, 240, 0.7)!important;
-        padding-right: 20px !important;
-        padding-left: 20px !important;
-    }
-    p.tagline{
-        color:#FFF !important;
-        font-weight: bold !important;
-    }
+            .yth-bg-bl {        
+                color:#000;
+                background-color:#1a4e7f;
+                padding-top:50px;
+                padding-bottom:50px;
+                border-top:1px solid #eee;
+                font-size:75%;
+        
+            }  
 
-    a.btnmr{
-        background-color:	rgb(45,45,45) !important;
-        font-size: 80% !important;
-        text-decoration: none !important;
-        color: #FFF !important;
-        box-shadow: 2px 2px 3px 1px rgb(200,200,200)!important;
-        padding-left: 25px !important;
-        padding-right: 25px !important;
-        padding-top: 8px !important;
-        padding-bottom: 8px !important;
-    }
-</style>
+            .yth-bg-bl h2{        
+                color:#FFF;
+        
+            }  
+            .yth-feature-1 {
+                position:relative;
+                box-shadow:0 10px 10px rgba(0,0,0,0.3); 
+            }
+            .yth-feature-1 .feature-outer {
+                position:relative;
+            }
+            .yth-feature-1 .feature-inner {
+                padding:0px 15px 50px 15px;
+        
+            }
+        
+        .yth-video-br {
+            background-color:#F36F21;
+            background-color:#222;
+            color:#fff;
+            padding-top:60px;
+            padding-bottom:60px;
+        }
+        .yth-video-br a {
+            color:#fff;
+        }   
+        
+        .yth-video-act, .yth-video-act:visited{
+            text-decoration:none;
+        }
+        .yth-video-act {
+            margin-left:auto;
+            margin-right:auto;
+            display:inline-block;  
+        }
+        .yth-video-act .yth-video-act-text {
+            font-weight:bold;
+        }
+        .yth-video-act:hover .yth-video-act-text, .yth-video-act:focus .yth-video-act-text {
+            text-decoration:underline;
+        }
+        .yth-video-act:hover .yth-icon-pulse .yth-pulse, .yth-video-act:focus .yth-icon-pulse .yth-pulse {
+            transform:scale(1.5);
+            background-color:rgba(255,255,255,0.1);
+            border:1px solid rgba(255,255,255,1);
+            animation:none;
+        }
+        .yth-video-act:hover .yth-icon-pulse-dark .yth-pulse, .yth-video-act:focus .yth-icon-pulse-dark .yth-pulse {
+            transform:scale(1.5);
+            background-color:rgba(0,0,0,0.1);
+            border:1px solid rgba(0,0,0,1);
+            animation:none;
+        }
+        .yth-bg-social{
+            background-color:#ddd;
+        }
+        .yth-bg-social .followus {
+            background:none;
+            display:block;
+            margin-bottom:10px;
+            padding:0;
+        }
+        .yth-bg-social .followus .twitter, .yth-bg-social .followus .instagram, .yth-bg-social .followus .facebook, .yth-bg-social .followus .youtube, .yth-bg-social .followus .linkedin {
+            background:none;
+            display:inline-block;
+            width:50%;
+        }
+        .yth-feedback {
+            background-color:#f9f9f9;
+            border-bottom:1px solid #eee;
+        }
+        .yth-feedback textarea {
+            width: 100%;
+            min-height:150px;
+        }
+        .yth-feedback input[type="text"] {
+            width: 100%;
+        }
+        @media (min-width:768px){
+            .float-right-sm {
+                float:right!important;
+            }
+        }
+        a.yth-lnk {
+            display:inline-block;
+            text-decoration:none;
+            position:relative; 
+            padding-bottom:6px;
+        }
+        a.yth-lnk, a.yth-lnk:visited {
+            color:#18657E;
+        }
+        a.yth-lnk::after {
+           content:"";
+           position:absolute;
+           bottom:2px;
+           left:25%;    
+           width:50%;
+           border-bottom:2px solid #F36F21;
+        }
+        .yth-feature-item {
+            border-bottom:2px solid #ddd;
+            padding:0px 0 10px 0;
+            background-color:#fdfdfd;
+            box-shadow:0 2px 4px rgba(0,0,0,0.3);
+            text-align:center;
+        }
+            .yth-bnr {
+                background-color:#555;
+                color:#fff;
+                background-image:url("/content/dam/esdc-edsc/images/services/youth/Banner2.jpg");
+                background-repeat:no-repeat;
+                background-position: left;
+                background-size:cover;
+                max-height: 502px;
 
-<section class="banner">
-<h1 class="versionTitle"><span class="bgfuschia">YOUTH</span> <br/> <span class="bggreen">@</span> <br/> <span class="bgblue">WORK</span></h1>
-</section>
-<div class="clearfix"></div>
+
+            }
+            .yth-bnr .inner {
+                padding-top:12%;
+                padding-bottom:8%;        
+            }
+            .yth-bnr h1{
+                border:none;
+                text-shadow: 0px 0px 10px #000; 
+                text-align:center;
+            }
+            .yth-bnr-feature{
+                background-color:rgba(0,0,0,0.3);
+                padding:15px;
+                margin-top:75px;       
+            }
+            .yth-lnk-btn {
+                background-color:#0B143B;
+                color:#fff;
+                text-decoration:none;
+        
+                padding:10px 30px 10px 30px;
+                margin-top:30px;
+            }
+            a.yth-lnk-btn, a.yth-lnk-btn:visited {
+                color:#fff;
+            }
+        @media (min-width:768px){
+            .yth-bnr.yth-bnr-overlay {
+                padding-top:10em;
+            }
+            .yth-bnr.yth-bnr-overlay .inner {
+                padding-top:6%;
+            }
+        }
 
 
-<section class="text-center f1">
-    <p class="tagline">Get personalized information about our programs and services</p>
+/*mastf*/
+        div.jmbtrn{
+            padding-left:0px;
+            padding-right:0px;
+            text-align:center;
+            min-height:500px;
+            padding-top:0%;
+            padding-bottom:0%;
+            font-size:70%;
+            
+        }
 
-    <!-- search content-->
+        div.syus{
+            background-image: linear-gradient( #1e7a65,#1d987c);
+            height:50%;
+            max-height:250px;
+            min-height:250px;
+            height:250px;
+            transform: skewX(8deg);
+            overflow:hidden;
+            padding-bottom:66px;
 
+        }
+
+        div.syc{
+            background-image: linear-gradient(#9c195f, #b81c70);
+            height:50%;
+            overflow:hidden;
+            max-height:250px;
+            min-height:250px;
+            height:250px;
+            padding-bottom:66px;
+        }
+
+        .ytni{
+            width:100%;
+            padding:0px;
+        }
+
+        .lt{
+            width:33%;
+            margin-left:33%;
+            margin-top:8em;
+            padding-bottom:10%
+        }
+        .btn-yth{
+            border-color:white !important;
+            font-size: 100% !important;
+            border-style:solid !important;
+            border-width:3px !important;
+            background: transparent !important;
+        }
+        .btn-yth:hover{
+            border-color:white !important;
+            font-size: 100% !important;
+            border-style:solid !important;
+            border-width:3px !important;
+            background: #0F0F0F !important;
+        }
+
+        .icon{
+            background-image:url("/content/dam/esdc-edsc/images/services/youth/logo1.png");
+            width:50px;
+
+        }
+
+        a.infocrd{
+            color:#000 !important;
+            text-decoration:none!important;
+            font-size:100%;
+        }
+
+        a.infocrd:hover{
+            color:#000 !important;
+            text-decoration:underline!important;
+            font-size:100%;
+        }
+
+        a.infocrd:visited{
+            color:#5F5F5F !important;
+            text-decoration:underline!important;
+            font-size:100%;
+        }
+
+        @media(min-width:1000px){
+            div.syus{
+            
+                transform: skewX(8deg)!important;
+                left:20px;
+
+            }
+
+            div.syc{
+                transform: skewX(-8deg)!important;
+                left:20px;
+            }
+
+            .noskewx{
+                transform:skewX(-8deg)!important;
+            }
+
+            .noskewy{
+                transform:skewX(8deg)!important;
+            }
+        }
+
+
+        @media(max-width:1000px){
+            div.syus{
+            
+                transform: skewX(0deg)!important;
+
+            }
+
+            div.syc{
+                transform: skewX(0deg)!important;
+            }
+
+            .noskewx{
+                transform:skewX(0deg);
+            }
+
+            .noskewy{
+                transform:skewX(0deg);
+            }
+        }
+
+        .ftimg{
+            padding:0px;
+        }
+
+        </style>
+
+
+    </main>
+
+<div class="container-fluid">
+        <div class="yth-theme row">
  
+             <div class="yth-bnr">
+
+             
+                         <div class="col-md-7 col-xs-12">
+                             <div class="yth-text-md">
+                                 <h1 property="name" id="wb-cont" class="wb-invisible yth-text-xl">Yung Canucks</h1>
+                                </div>
+                                <img class="lt img-responsive" src="/content/dam/esdc-edsc/images/services/youth/logo-02.png"/>
+                         </div>
+                       
+                         
+                         <div class="col-md-5 jmbtrn wb-eqht">
+                             
+                            
+                            <div class="syus col-md-12 col-xs-12 hght-inhrt">
+                                <div class="noskewx">
+                             <h2>Set yourself up for career success</h2>
+                             
+                             <p>Programs and tools to help you with jobs, skills and school.</p>
+                             <p><img height="45px" src="/content/dam/esdc-edsc/images/services/youth/icons-services/pmyc-a.png"/></p>
+                             <div class="col-md-12">
+                                 
+                                 <a class="btn btn-primary btn-yth">Lorem ipsum</a>
+                                </div>
+                            </div>
+                             </div>
+                            
+                             
+                             <div class="syc col-md-12 col-xs-12 hght-inhrt">
+                                    <div class="noskewy">
+                             <h2>Serve your community</h2>
+                             
+                             <div class="col-md-12">
+                                    <p><img height="45px" src="/content/dam/esdc-edsc/images/services/youth/icons-services/pmyc-a.png"/></p>
+                            </div>
+                             <a class="btn btn-primary btn-yth">Lorem ipsum</a>
+                             </div>
+                             </div>
+                            
+                        </div>
+                  
+                        <div class="clearfix"></div>
+                    
+             
+         </div>
+         
+        
+               <!--     
+           <div class="yth-bnr">
+             <div class="container">
+               <div class="inner">
+                 <div class="yth-text-md">
+                   <h1 property="name" id="wb-cont" class="yth-text-xl">Young Canadians</h1>
+                 </div>
+                 <div class="yth-bnr-feature">
+                   <h2 class="yth-text-lg mrgn-tp-0">Featured</h2>
+                   <div class="yth-text-sm">
+                     <div class="clearfix"></div>
+                     <h3 class="yth-text-md mrgn-tp-md">Building a Youth Policy for Canada</h3>
+                     <p>Help develop Canada’s first-ever Youth Policy. Shape the future of young people in Canada!</p>
+                     <div class="mrgn-tp-lg"> <a class="yth-lnk-btn yth-text-sm" href="/content/canadasite/en/youth/programs/policy.html">Learn more<span class="wb-inv"> - Building a Youth Policy for Canada</span></a> </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>-->
+           <div class="yth-bg-3">
+             <!--<div class="container">
+               <h2 class="text-center mrgn-tp-0 yth-text-xl">Most Used Tools</h2>
+               <ul class="list-unstyled wb-eqht yth-topic-card-lst mrgn-tp-lg">
+                 <li class="col-lg-3 col-md-6 col-sm-6 col-xs-12 mrgn-bttm-lg"> <a class="yth-topic-card card-style-2" href="https://www.jobbank.gc.ca/content_pieces-eng.do?cid=11906">
+                   <div class="card-outer">
+                     <div class="card-inner">
+                       <div class="card-body text-center">
+                         <div class="clearfix mrgn-tp-sm"></div>
+                         <div class="mrgn-bttm-md">
+                           <div class="yth-topic-icon mrgn-tp-xl hidden-xs"> <img class="img-responsive" src="/content/dam/esdc-edsc/images/services/youth/icons-services/resume-writing-a.png" alt=""/> <img class="img-responsive hover" src="/content/dam/esdc-edsc/images/services/youth/icons-services/resume-writing-b.png" alt=""/> </div>
+                           <h3 class="mrgn-tp-md">Resume writing</h3>
+                           <p>How to write a good resume.</p>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                   <div class="card-foot"> </div>
+                   </a> </li>
+                 <li class="col-lg-3 col-md-6 col-sm-6 col-xs-12 mrgn-bttm-lg"> <a class="yth-topic-card card-style-2" href="https://www.jobbank.gc.ca/findajob">
+                   <div class="card-outer">
+                     <div class="card-inner">
+                       <div class="card-body text-center">
+                         <div class="clearfix mrgn-tp-sm"></div>
+                         <div class="mrgn-bttm-md">
+                           <div class="yth-topic-icon mrgn-tp-xl hidden-xs"> <img class="img-responsive" src="/content/dam/esdc-edsc/images/services/youth/icons-services/find-work-a.png" alt=""/> <img class="img-responsive hover" src="/content/dam/esdc-edsc/images/services/youth/icons-services/find-work-b.png" alt=""/> </div>
+                           <h3 class="mrgn-tp-md">Find work</h3>
+                           <p>Search job postings in Canada. </p>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                   <div class="card-foot"> </div>
+                   </a> </li>
+                 <li class="col-lg-3 col-md-6 col-sm-6 col-xs-12 clr-lft-md clr-lft-sm mrgn-bttm-lg"> <a class="yth-topic-card card-style-2" href="http://tools.canlearn.ca/cslgs-scpse/cln-cln/crp-lrc/af.nlindex-eng.do">
+                   <div class="card-outer">
+                     <div class="card-inner">
+                       <div class="card-body text-center">
+                         <div class="clearfix mrgn-tp-sm"></div>
+                         <div class="mrgn-bttm-md">
+                           <div class="yth-topic-icon mrgn-tp-xl hidden-xs"> <img class="img-responsive" src="/content/dam/esdc-edsc/images/services/youth/icons-services/student-loan-a.png" alt=""/> <img class="img-responsive hover" src="/content/dam/esdc-edsc/images/services/youth/icons-services/student-loan-b.png" alt=""/> </div>
+                           <h3 class="mrgn-tp-md">Student loans calculator</h3>
+                           <p>Estimate your monthly payments.</p>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                   <div class="card-foot"> </div>
+                   </a> </li>
+                 <li class="col-lg-3 col-md-6 col-sm-6 col-xs-12 mrgn-bttm-lg"> <a class="yth-topic-card card-style-2" href="https://www.jobbank.gc.ca/explorecareers.do">
+                   <div class="card-outer">
+                     <div class="card-inner">
+                       <div class="card-body text-center">
+                         <div class="clearfix mrgn-tp-sm"></div>
+                         <div class="mrgn-bttm-md">
+                           <div class="yth-topic-icon mrgn-tp-xl hidden-xs"> <img class="img-responsive" src="/content/dam/esdc-edsc/images/services/youth/icons-services/explore-careers-a.png" alt=""/> <img class="img-responsive hover" src="/content/dam/esdc-edsc/images/services/youth/icons-services/explore-careers-b.png" alt=""/> </div>
+                           <h3 class="mrgn-tp-md">Explore careers</h3>
+                           <p>Learn more about occupations you are interested in.</p>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                   <div class="card-foot"> </div>
+                   </a> </li>
+               </ul>
+             </div> -->
+             <div class="clearfix"></div>
+             <div class="container-fluid">
+               <h2 class="text-center yth-text-lg mrgn-tp-lg mrgn-bttm-lg">Services and information</h2>
+               <div class="container">
+               <ul class="list-unstyled row wb-eqht yth-topic-card-lst">
+                 
+                <!-- 1 -->
+                <li class="col-lg-4 col-md-4 col-sm-6 mrgn-bttm-lg"> <a class="yth-topic-card card-style-2" href="/content/canadasite/en/campaign/prime-ministers-youth-council.html">
+                    <div class="card-outer">
+                     <div class="card-inner">
+                       <div class="card-body">
+                         <div class="clearfix mrgn-tp-sm"></div>
+                        
+                        
+                         <div class="col-md-4">
+                             <div class="mrgn-bttm-md">
+                                 <div class="yth-topic-icon mrgn-tp-xl hidden-xs"> <img class="img-responsive" src="/content/dam/esdc-edsc/images/services/youth/icons-services/pmyc-sq.png" alt=""/> <img class="img-responsive hover" src="/content/dam/esdc-edsc/images/services/youth/icons-services/pmyc-b.png" alt=""/> </div>
+                             </div>
+                         </div>
+                         
+                             <div class="col-md-8">
+                                 <h3 class="mrgn-tp-md">Contribute to your community</h3>
+                                 <div class="card-foot"> </div>
+                                 <p>Gain experience<br/>Make a difference</p>
+                             </div>
+                       </div>
+                     </div>
+                   </div>
+                   </a> </li>
+
+                   <!-- 2 -->
+                 <li class="col-lg-4 col-md-4 col-sm-6 mrgn-bttm-lg"> <a class="yth-topic-card card-style-2" href="/content/canadasite/en/services/jobs/opportunities/student.html">
+                     <div class="card-outer">
+                             <div class="card-inner">
+                               <div class="card-body">
+                                 <div class="clearfix mrgn-tp-sm"></div>
+                                
+                                
+                                 <div class="col-md-4">
+                                     <div class="mrgn-bttm-md">
+                                         <div class="yth-topic-icon mrgn-tp-xl hidden-xs"> <img class="img-responsive" src="/content/dam/esdc-edsc/images/services/youth/icons-services/pmyc-sq.png" alt=""/> <img class="img-responsive hover" src="/content/dam/esdc-edsc/images/services/youth/icons-services/pmyc-b.png" alt=""/> </div>
+                                     </div>
+                                 </div>
+                                 
+                                     <div class="col-md-8">
+                                         <h3 class="mrgn-tp-md">Discover cultural youth programs</h3>
+                                         <div class="card-foot"> </div>
+                                         <p>Work experience<br/>Internships<br/>Parks Canada activities<br/>Language immersion</p>
+                                     </div>
+                               </div>
+                             </div>
+                           </div>
+                   </a> </li>
+
+                   <!-- 3 -->
+                 <li class="col-lg-4 col-md-4 col-sm-6 clr-lft-sm mrgn-bttm-lg"> <a class="yth-topic-card card-style-2" href="/content/canadasite/en/services/jobs/training.html">
+                     <div class="card-outer">
+                             <div class="card-inner">
+                               <div class="card-body">
+                                 <div class="clearfix mrgn-tp-sm"></div>
+                                
+                                
+                                 <div class="col-md-4">
+                                     <div class="mrgn-bttm-md">
+                                         <div class="yth-topic-icon mrgn-tp-xl hidden-xs"> <img class="img-responsive" src="/content/dam/esdc-edsc/images/services/youth/icons-services/pmyc-sq.png" alt=""/> <img class="img-responsive hover" src="/content/dam/esdc-edsc/images/services/youth/icons-services/pmyc-b.png" alt=""/> </div>
+                                     </div>
+                                 </div>
+                                 
+                                     <div class="col-md-8">
+                                         <h3 class="mrgn-tp-md">Environment and climate change</h3>
+                                         <div class="card-foot"> </div>
+                                         <p>Lorem ipsum<br/>Lorem ipsum</p>
+                                     </div>
+                               </div>
+                             </div>
+                           </div>
+                   </a> </li>
+
+                   <!-- 1 -->
+
+                 <li class="col-lg-4 col-md-4 col-sm-6 mrgn-bttm-lg"> <a class="yth-topic-card card-style-2" href="/content/canadasite/en/services/jobs/education.html ">
+                     <div class="card-outer">
+                             <div class="card-inner">
+                               <div class="card-body">
+                                 <div class="clearfix mrgn-tp-sm"></div>
+                                
+                                
+                                 <div class="col-md-4">
+                                     <div class="mrgn-bttm-md">
+                                         <div class="yth-topic-icon mrgn-tp-xl hidden-xs"> <img class="img-responsive" src="/content/dam/esdc-edsc/images/services/youth/icons-services/pmyc-sq.png" alt=""/> <img class="img-responsive hover" src="/content/dam/esdc-edsc/images/services/youth/icons-services/pmyc-b.png" alt=""/> </div>
+                                     </div>
+                                 </div>
+                                 
+                                     <div class="col-md-8">
+                                         <h3 class="mrgn-tp-md">Plan your future</h3>
+                                         <div class="card-foot"> </div>
+                                         <p>Training<br/>Education<br/>Hiring programs<br/>Jobs and internships</p>
+                                     </div>
+                               </div>
+                             </div>
+                           </div>
+                   </a> </li>
+                 <li class="col-lg-4 col-md-4 col-sm-6 clr-lft-sm mrgn-bttm-lg"> <a class="yth-topic-card card-style-2" href="https://www.canada.ca/en/youth/programs/policy.html">
+                     <div class="card-outer">
+                             <div class="card-inner">
+                               <div class="card-body">
+                                 <div class="clearfix mrgn-tp-sm"></div>
+                                
+                                
+                                 <div class="col-md-4">
+                                     <div class="mrgn-bttm-md">
+                                         <div class="yth-topic-icon mrgn-tp-xl hidden-xs"> <img class="img-responsive" src="/content/dam/esdc-edsc/images/services/youth/icons-services/pmyc-sq.png" alt=""/> <img class="img-responsive hover" src="/content/dam/esdc-edsc/images/services/youth/icons-services/pmyc-b.png" alt=""/> </div>
+                                     </div>
+                                 </div>
+                                 
+                                     <div class="col-md-8">
+                                         <h3 class="mrgn-tp-md">Serve your community</h3>
+                                         <div class="card-foot"> </div>
+                                         <p>Lorem ipsum<br/>Lorem ipsum</p>
+                                     </div>
+                               </div>
+                             </div>
+                           </div>
+                   </a> </li>
+                 <li class="col-lg-4 col-md-4 col-sm-6 mrgn-bttm-lg"> <a class="yth-topic-card card-style-2" href="/content/canadasite/en/services/youth/contribute.html">
+                     <div class="card-outer">
+                             <div class="card-inner">
+                               <div class="card-body">
+                                 <div class="clearfix mrgn-tp-sm"></div>
+                                
+                                
+                                 <div class="col-md-4">
+                                     <div class="mrgn-bttm-md">
+                                         <div class="yth-topic-icon mrgn-tp-xl hidden-xs"> <img class="img-responsive" src="/content/dam/esdc-edsc/images/services/youth/icons-services/pmyc-sq.png" alt=""/> <img class="img-responsive hover" src="/content/dam/esdc-edsc/images/services/youth/icons-services/pmyc-b.png" alt=""/> </div>
+                                     </div>
+                                 </div>
+                                 
+                                     <div class="col-md-8">
+                                         <h3 class="mrgn-tp-md">Prime Minister’s Youth Council</h3>
+                                         <div class="card-foot"> </div>
+                                         <p>Meet the PM's Youth Council</p>
+                                     </div>
+                               </div>
+                             </div>
+                           </div>
+                   </a> </li>
 
 
-    <!-- form goes here 
-    
-    <img src="#" class="progressBar"/>        
-        <div class="col-md-6">
-            <div class="wb-fieldflow">
-                <ul>
-                    <li data-wb-fieldflow="ajax/ajax-1.html">a</li>
-                    <li data-wb-fieldflow="ajax-2.html">(Set 2) Vestibulum pretium tortor vel facilisis sodales.</li>
-                    <li data-wb-fieldflow="ajax-3.html">(Set 3) Nunc sit amet dui ut justo efficitur dapibus.</li>
-                    <li data-wb-fieldflow="ajax-4.html">(Set 4) Praesent at purus ut turpis sollicitudin aliquam.</li>
-                    <li data-wb-fieldflow="ajax-5.html">(Set 5) Sed eget dui ac nunc mattis consequat in a ex.</li>
-                </ul>
+                 <li class="col-lg-4 col-md-4 col-sm-6 clr-lft-sm mrgn-bttm-lg"> <a class="yth-topic-card card-style-2" href="http://international.gc.ca/world-monde/study_work_travel-etude_travail_voyage/index.aspx?lang=eng">
+                     <div class="card-outer">
+                             <div class="card-inner">
+                               <div class="card-body">
+                                 <div class="clearfix mrgn-tp-sm"></div>
+                                
+                                
+                                 <div class="col-md-4">
+                                     <div class="mrgn-bttm-md">
+                                         <div class="yth-topic-icon mrgn-tp-xl hidden-xs"> <img class="img-responsive" src="/content/dam/esdc-edsc/images/services/youth/icons-services/pmyc-sq.png" alt=""/> <img class="img-responsive hover" src="/content/dam/esdc-edsc/images/services/youth/icons-services/pmyc-b.png" alt=""/> </div>
+                                     </div>
+                                 </div>
+                                 
+                                     <div class="col-md-8">
+                                         <h3 class="mrgn-tp-md">Learn about justice</h3>
+                                         <div class="card-foot"> </div>
+                                         <p>Youth justice system<br/>Youth justice fund<br/>Education tools</p>
+                                     </div>
+                               </div>
+                             </div>
+                           </div>
+                   </a> </li>
+                 <li class="col-lg-4 col-md-4 col-sm-6 mrgn-bttm-lg"> <a class="yth-topic-card card-style-2" href="/content/canadasite/en/services/culture/cultural-youth-programs.html">
+                     <div class="card-outer">
+                             <div class="card-inner">
+                               <div class="card-body">
+                                 <div class="clearfix mrgn-tp-sm"></div>
+                                
+                                
+                                 <div class="col-md-4">
+                                     <div class="mrgn-bttm-md">
+                                         <div class="yth-topic-icon mrgn-tp-xl hidden-xs"> <img class="img-responsive" src="/content/dam/esdc-edsc/images/services/youth/icons-services/pmyc-sq.png" alt=""/> <img class="img-responsive hover" src="/content/dam/esdc-edsc/images/services/youth/icons-services/pmyc-b.png" alt=""/> </div>
+                                     </div>
+                                 </div>
+                                 
+                                     <div class="col-md-8">
+                                         <h3 class="mrgn-tp-md">Manage your money</h3>
+                                         <div class="card-foot"> </div>
+                                         <p>Budgeting tips<br/>Help with debts</p>
+                                     </div>
+                               </div>
+                             </div>
+                           </div>
+                   </a> </li>
+                 <li class="col-lg-4 col-md-4 col-sm-6 clr-lft-sm mrgn-bttm-lg"> <a class="yth-topic-card card-style-2" href="/content/canadasite/en/services/health/youth-health.html">
+                     <div class="card-outer">
+                             <div class="card-inner">
+                               <div class="card-body">
+                                 <div class="clearfix mrgn-tp-sm"></div>
+                                
+                                
+                                 <div class="col-md-4">
+                                     <div class="mrgn-bttm-md">
+                                         <div class="yth-topic-icon mrgn-tp-xl hidden-xs"> <img class="img-responsive" src="/content/dam/esdc-edsc/images/services/youth/icons-services/pmyc-sq.png" alt=""/> <img class="img-responsive hover" src="/content/dam/esdc-edsc/images/services/youth/icons-services/pmyc-b.png" alt=""/> </div>
+                                     </div>
+                                 </div>
+                                 
+                                     <div class="col-md-8">
+                                         <h3 class="mrgn-tp-md">Stay healthy</h3>
+                                         <div class="card-foot"> </div>
+                                         <p>Mental health<br/>Smoking<br/>Drugs<br/>Bullying and violence<br/>Sexual health</p>
+                                     </div>
+                               </div>
+                             </div>
+                           </div>
+                   </a> </li>
+                 <li class="col-lg-4 col-md-4 col-sm-6 clr-lft-md mrgn-bttm-lg"> <a class="yth-topic-card card-style-2" href="/content/canadasite/en/services/finance/manage.html">
+                     <div class="card-outer">
+                             <div class="card-inner">
+                               <div class="card-body">
+                                 <div class="clearfix mrgn-tp-sm"></div>
+                                
+                                
+                                 <div class="col-md-4">
+                                     <div class="mrgn-bttm-md">
+                                         <div class="yth-topic-icon mrgn-tp-xl hidden-xs"> <img class="img-responsive" src="/content/dam/esdc-edsc/images/services/youth/icons-services/pmyc-sq.png" alt=""/> <img class="img-responsive hover" src="/content/dam/esdc-edsc/images/services/youth/icons-services/pmyc-b.png" alt=""/> </div>
+                                     </div>
+                                 </div>
+                                 
+                                     <div class="col-md-8">
+                                         <h3 class="mrgn-tp-md">Travel the world</h3>
+                                         <div class="card-foot"> </div>
+                                         <p>Study<br/>Work<br/>Volunteer<br/>Travel</p>
+                                     </div>
+                               </div>
+                             </div>
+                           </div>
+                   </a> </li>
+                 <li class="col-lg-4 col-md-4 col-sm-6 mrgn-bttm-lg"> <a class="yth-topic-card card-style-2" href="/content/canadasite/en/services/policing/justice/youth/index.html">
+                     <div class="card-outer">
+                             <div class="card-inner">
+                               <div class="card-body">
+                                 <div class="clearfix mrgn-tp-sm"></div>
+                                
+                                
+                                 <div class="col-md-4">
+                                     <div class="mrgn-bttm-md">
+                                         <div class="yth-topic-icon mrgn-tp-xl hidden-xs"> <img class="img-responsive" src="/content/dam/esdc-edsc/images/services/youth/icons-services/pmyc-sq.png" alt=""/> <img class="img-responsive hover" src="/content/dam/esdc-edsc/images/services/youth/icons-services/pmyc-b.png" alt=""/> </div>
+                                     </div>
+                                 </div>
+                                 
+                                     <div class="col-md-8">
+                                         <h3 class="mrgn-tp-md">Women and gender</h3>
+                                         <div class="card-foot"> </div>
+                                         <p>Empower women and girls<br/>Gender equality<br/>Lorem ipsum</p>
+                                     </div>
+                               </div>
+                             </div>
+                           </div>
+                   </a> </li>
+                   <li class="col-lg-4 col-md-4 col-sm-6 mrgn-bttm-lg"> <a class="yth-topic-card card-style-2" href="/content/canadasite/en/services/policing/justice/youth/index.html">
+                     <div class="card-outer">
+                             <div class="card-inner">
+                               <div class="card-body">
+                                 <div class="clearfix mrgn-tp-sm"></div>
+                                
+                                
+                                 <div class="col-md-4">
+                                     <div class="mrgn-bttm-md">
+                                         <div class="yth-topic-icon mrgn-tp-xl hidden-xs"> <img class="img-responsive" src="/content/dam/esdc-edsc/images/services/youth/icons-services/pmyc-sq.png" alt=""/> <img class="img-responsive hover" src="/content/dam/esdc-edsc/images/services/youth/icons-services/pmyc-b.png" alt=""/> </div>
+                                     </div>
+                                 </div>
+                                 
+                                     <div class="col-md-8">
+                                         <h3 class="mrgn-tp-md">Youth policy</h3>
+                                         <div class="card-foot"> </div>
+                                         <p>Help shape it!</p>
+                                     </div>
+                               </div>
+                             </div>
+                           </div>
+                   </a> </li>
+               </ul>
+             </div>
+ </div>
+         </div>
+ 
+         <div class="yth-bg-bl">
+             <div class="container">
+ 
+                 
+               <h2 class="text-center mrgn-tp-0 yth-text-lg mrgn-bttm-lg">Tips and information</h2>
+               
+               
+               
+             <!-- <div class="col-md-offset-1 col-md-10">-->
+ 
+             <div class="mrgn-lft-md mrgn-rght-md row wb-eqht">
+               <section class="col-sm-4 col-sm-offset-1">
+                 <div class="row yth-feature-item hght-inhrt">
+                        <div class="col-sm-12 hidden-xs ftimg"> <img class="img-responsive ytni" src="/content/dam/esdc-edsc/images/features/180716-CSC-Ottawa-River-Cleanup-webftr-018.jpg" alt="" /> </div>
+                    <div class="col-sm-12">
+
+                        
+                   <h3 class="mrgn-tp-md"><a class="infocrd" href="/content/canadasite/en/employment-social-development/campaigns/youth/serve.html">Resume writing</a></h3>
+
+                   <p>How to write a good resume</p>
+                
+                </div>
+               </div>
+            </section>
+              
+             <section class="col-sm-offset-2 col-sm-4">
+               <div class="row yth-feature-item hght-inhrt">
+                    <div class="col-sm-12 ftimg hidden-xs"> <img class="img-responsive ytni" src="/content/dam/esdc-edsc/images/campaigns/youth/ysi/ysi-en.jpg" alt="" /> </div>
+                 <div class="col-sm-12">
+                        
+                   <h3 class="mrgn-tp-md"><a class="infocrd" href="/content/canadasite/en/employment-social-development/services/canada-service-corps.html">Student loans calculator</a></h3>
+                   <p>Estimate your monthly payments</p>
+              
+                </div>
+               </div>
+            </section>
             </div>
-        </div>
-
-        <section data-ajax-after="ajax/data-ajax-extra-en.html">
-            ...
-        </section>    
-
- -->      
-    <p><a class="f1-link" href="#">See all programs and services</a></p>
-</section>
-    <section class="col-md-12">
-        <h2>Trending opportunities</h2>
-        <hr class="fuschia"/>
-    <section>
-        <h3>Canada Service Corps</h3>
-        <p>Serve your community while learning valuable skills and gaining experience.</p>
-        <a class="btnmr" href="#" role="button">More details</a>
-    <hr class="green"/>
-    </section>
-    <section>
-        <h3>Apprenticeship Grants</h3>
-        <p>Find out how you can get up to $4,000 through the Apprenticeship Incentive Grant and the Apprenticeship Completion Grant.</p>
-        <a class="btnmr" href="#" role="button">More details</a>
-    <hr class="blue"/>
-    </section>
-    <section>
-        <h3>Job Bank</h3>
-        <p>Search available full and part-time jobs and find the one that's right for you.</p>
-        <a class="btnmr" href="#" role="button">More details</a>
-    <hr class="yellow"/>
-    </section>
-    </section>
-</section>
-
+ 
+         <!--</div>-->
+ 
+             </div>
+         </div>
+           <div class="yth-bg-social">
+             <div class="container">
+                 <div class="col-sm-8 col-offset-sm-2"></div>
+               <div class="text-center">
+                 <h2 class="yth-text-sm">Stay connected</h2>
+                 <p>Follow us to get the latest and have your say.</p>
+               </div>
+               
+               <ul class="mrgn-tp-lg  list-unstyled row followus">
+                 <li class="text-center col-xs-4 col-sm-2 col-sm-offset-1"> <a class="twitter wb-lbx lbx-modal" href="#inline_content_modal3"> <img class="center-block img-responsive" src="/content/dam/esdc-edsc/images/campaigns/youth/ysi/icon-twitter-sm.png" alt="Twitter" /> </a> </li>
+                 <li class="text-center  col-xs-4 col-sm-2"> <a class="instagram" rel="external" href="https://www.instagram.com/leaderstoday/"> <img class="center-block img-responsive" src="/content/dam/esdc-edsc/images/campaigns/youth/ysi/icon-instagram-sm.png" alt="Instagram" /> </a> </li>
+                 <li class="text-center  col-xs-4 col-sm-2"> <a class="facebook" rel="external" href="https://www.facebook.com/LeadersToday/"> <img class="center-block img-responsive" src="/content/dam/esdc-edsc/images/campaigns/youth/ysi/icon-fb-sm.png" alt="Facebook" /> </a> </li>
+                 <li class="text-center  col-xs-4 col-sm-2"> <a class="youtube" rel="external" href="https://www.youtube.com/user/HRSDCanada"> <img class="center-block img-responsive" src="/content/dam/esdc-edsc/images/campaigns/youth/ysi/icon-youtube-sm.png" alt="YouTube" /> </a> </li>
+                 <li class="text-center  col-xs-4 col-sm-2"> <a class="linkedin" rel="external" href="https://ca.linkedin.com/company/hrsdc"> <img class="center-block img-responsive" src="/content/dam/esdc-edsc/images/campaigns/youth/ysi/icon-in-sm.png" alt="LinkedIn" /> </a> </li>
+               </ul>
+            </div>
+             </div>
+           </div>
+           <section id="inline_content_modal3" class="mfp-hide modal-dialog modal-content overlay-def modal-lg">
+             <header class="modal-header">
+               <h3 class="modal-title">Twitter</h3>
+             </header>
+             <div class="modal-body">
+               <ul>
+                 <li><a rel="external" href="https://twitter.com/Jobs_Emplois?lang=en">@Jobs_Emplois</a></li>
+                 <li><a rel="external" href="https://twitter.com/MinWorkDev?lang=en">@MinWorkDev</a></li>
+               </ul>
+             </div>
+           </section>
+         </div>
+       </div>
+ 
+  <div class="container">
+         <div class="row pagedetails">
+           <details class="brdr-0 col-sm-6 col-lg-4 mrgn-tp-sm">
+             <summary class="btn btn-default text-center">Report a problem or mistake on this page</summary>
+             <div class="clearfix"></div>
+             <div class="well row">
+               <div>
+                 <div class="gc-rprt-prblm">
+                   <div class="gc-rprt-prblm-frm gc-rprt-prblm-tggl">
+                     <form id="gc-rprt-prblm-form" action="/gc/services/generateemail" method="post">
+                       <input type="hidden" name="pageTitle" value="Home">
+                       <input type="hidden" name="submissionPage" value="/content/canadasite/en/services/youth.html">
+                       <input type="hidden" name="lang" value="eng">
+                       <input type="hidden" name="pageOwner" value="gc:institutions/service-canada">
+                       <input id="emailTemplate" name="emailTemplate" type="hidden" value="reportaproblem/rap">
+                       <input name="subject" type="hidden" value="Report a problem or mistake on this page">
+                       <fieldset>
+                         <legend><span class="field-name">Please select all that apply:</span></legend>
+                         <div class="checkbox">
+                           <label for="problem1">
+                             <input name="problem1" id="problem1" type="checkbox" value="Yes" data-reveal="#broken" data-gc-analytics-rap="A link, button or video is not working-Un lien, un bouton ou une vidéo ne fonctionne pas">
+                             A link, button or video is not working</label>
+                           <input name="problem1" type="hidden" value="No">
+                         </div>
+                         <div class="checkbox">
+                           <label for="problem2">
+                             <input name="problem2" id="problem2" type="checkbox" value="Yes" data-reveal="#spelling" data-gc-analytics-rap="It has a spelling mistake-Il y a une erreur d'orthographe ou de grammaire">
+                             It has a spelling mistake</label>
+                           <input name="problem2" type="hidden" value="No">
+                         </div>
+                         <div class="checkbox">
+                           <label for="problem3">
+                             <input name="problem3" id="problem3" type="checkbox" value="Yes" data-reveal="#wrong" data-gc-analytics-rap="Information is missing-Les renseignements sont incomplets">
+                             Information is missing</label>
+                           <input name="problem3" type="hidden" value="No">
+                         </div>
+                         <div class="checkbox">
+                           <label for="problem4">
+                             <input name="problem4" id="problem4" type="checkbox" value="Yes" data-reveal="#outdated" data-gc-analytics-rap="Information is outdated or wrong-L'information n'est plus à jour ou est erronée">
+                             Information is outdated or wrong</label>
+                           <input name="problem4" type="hidden" value="No">
+                         </div>
+                         <div class="checkbox">
+                           <label for="problem5">
+                             <input name="problem5" id="problem5" type="checkbox" value="Yes" data-reveal="#find" data-gc-analytics-rap="Login error when trying to access an account (e.g. My Service Canada Account)-Message d'erreur à l'ouverture de la session lorsque je tente d'accéder à un compte (ex. Mon dossier Service Canada)">
+                             Login error when trying to access an account (e.g. My Service Canada Account)</label>
+                           <input name="problem5" type="hidden" value="No">
+                         </div>
+                         <ul>
+                           <li class="checkbox">
+                             <label for="problem6a">
+                               <input name="problem6" id="problem6a" type="checkbox" value="Yes" data-reveal="#find" data-gc-analytics-rap="GC Key access-Accès CléGC">
+                               GC Key access</label>
+                             <input name="problem6" type="hidden" value="No">
+                           </li>
+                           <li class="checkbox">
+                             <label for="problem7">
+                               <input name="problem7" id="problem7" type="checkbox" value="Yes" data-reveal="#find" data-gc-analytics-rap="SecureKey Concierge (Banking Credential) access-Accès SecureKey Service de Concierge (justificatifs d'identité bancaires)">
+                               SecureKey Concierge (Banking Credential) access </label>
+                             <input name="problem7" type="hidden" value="No">
+                           </li>
+                           <li class="checkbox">
+                             <label for="problem8">
+                               <input name="problem8" id="problem8" type="checkbox" value="Yes" data-reveal="#find" data-gc-analytics-rap="Personal Access Code (PAC) problems or EI Access Code (AC) problems-Problème avec le Code d'accès personnel (CAP) ou avec le Code d'accès (CA) de l'assurance emploi">
+                               Personal Access Code (PAC) problems or EI Access Code (AC) problems</label>
+                             <input name="problem8" type="hidden" value="No">
+                           </li>
+                           <li class="checkbox">
+                             <label for="problem9">
+                               <input name="problem9" id="problem9" type="checkbox" value="Yes" data-reveal="#find" data-gc-analytics-rap="Social Insurance Number (SIN) validation problems-Problème lié à la validation du numéro d'assurance sociale (NAS)">
+                               Social Insurance Number (SIN) validation problems</label>
+                             <input name="problem9" type="hidden" value="No">
+                           </li>
+                           <li class="checkbox">
+                             <label for="problem10">
+                               <input name="problem10" id="problem10" type="checkbox" value="Yes" data-reveal="#find" data-gc-analytics-rap="Other login error not in this list-Autre erreur lors de l'ouverture de session qui ne figure pas sur cette liste">
+                               Other login error not in this list</label>
+                             <input name="problem10" type="hidden" value="No">
+                           </li>
+                         </ul>
+                         <div class="checkbox">
+                           <label for="problem11">
+                             <input name="problem11" id="problem11" type="checkbox" value="Yes" data-reveal="#find" data-gc-analytics-rap="I can't find what I'm looking for-Je n'arrive pas à trouver ce que je cherche">
+                             I can't find what I'm looking for</label>
+                           <input name="problem11" type="hidden" value="No">
+                         </div>
+                         <div class="checkbox">
+                           <label for="problem12">
+                             <input name="problem12" id="problem12" type="checkbox" value="Yes" data-reveal="#find" data-gc-analytics-rap="Other issue not in this list-Autre problème qui ne figure pas sur cette liste">
+                             Other issue not in this list</label>
+                           <input name="problem12" type="hidden" value="No">
+                         </div>
+                       </fieldset>
+                       <button data-wb5-click="postback@#gc-rprt-prblm-form@" type="submit" class="btn btn-primary wb-toggle" data-toggle='{"stateOff": "hide", "stateOn": "show", "selector": ".gc-rprt-prblm-tggl"}'>Submit</button>
+                     </form>
+                   </div>
+                   <div class="gc-rprt-prblm-thnk gc-rprt-prblm-tggl hide">
+                     <h3>Thank you for your help!</h3>
+                     <p>You will not receive a reply. For enquiries,&nbsp;<a href="/content/canadasite/en/contact/index.html">contact us</a>.</p>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </details>
+           <div class="col-sm-3 mrgn-tp-sm pull-right">
+             <div class="wb-share" data-wb-share='{"lnkClass": "btn btn-default btn-block"}'></div>
+           </div>
+           <div class="datemod col-xs-12 mrgn-tp-lg">
+             <dl id="wb-dtmd">
+               <dt>Date modified:&#32;</dt>
+               <dd>
+                 <time property="dateModified">2018-06-21</time>
+               </dd>
+             </dl>
+           </div>
+         </div>
+       </div>
